@@ -14,7 +14,7 @@
 NSMutableArray *_files;
 NSSound *_sound;
 NSString *_directory;
-
+BOOL *_paused;
 
 - (id)initWithFiles:(NSString *) directory :(NSArray *)files {
 	if (self = [super init]) {
@@ -52,6 +52,16 @@ NSString *_directory;
 
 - (void)sound:(NSSound *)sound didFinishPlaying:(BOOL)finishedPlaying {
 	[self play];
+}
+
+- (void)playOrPause {
+	if(_paused) {
+		[_sound resume];
+		_paused = FALSE;
+	} else{
+		[_sound pause];
+		_paused = TRUE;
+	}
 }
 
 @end

@@ -17,4 +17,5 @@
 -(void)play;
 -(void)stop;
 -(void)skip;
+-(void)playOrPause;
 @end

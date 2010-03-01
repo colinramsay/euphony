@@ -50,6 +50,11 @@ NSSoundPlayer *_player;
 
 }
 
+
+- (void) pausePlaying:(id)sender {
+	[_player playOrPause];
+}
+
 - (void) stopPlaying:(id)sender {
 	[_player stop];
 }
@@ -66,6 +71,11 @@ NSSoundPlayer *_player;
 	NSZone *menuZone = [NSMenu menuZone];
 	NSMenu *menu = [[NSMenu allocWithZone:menuZone] init];
 	NSMenuItem *menuItem;
+	
+	menuItem = [menu addItemWithTitle:@"Pause/Play"
+							   action:@selector(pausePlaying:)
+						keyEquivalent:@""];
+	[menuItem setTarget:self];
 	
 	// Add To Items
 	menuItem = [menu addItemWithTitle:@"Open Folder"
