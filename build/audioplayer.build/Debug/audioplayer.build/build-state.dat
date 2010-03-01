@@ -1,7 +1,7 @@
 Taudioplayer
 v7
 r0
-t289133504.123654
+t289141498.147362
 cCheck dependencies
 cProcessInfoPlistFile /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Info.plist audioplayer-Info.plist
 cCopyStringsFile /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
@@ -50,9 +50,9 @@ s360
 i<Foundation/Foundation.h>
 
 N/Users/colin/Projects/audioplayer/NSSoundPlayer.m
-c000000004B8B9C530000000000000460
-t1267440723
-s1120
+c000000004B8BBB78000000000000047F
+t1267448696
+s1151
 i"NSSoundPlayer.h"
 
 N/Users/colin/Projects/audioplayer/TrayMenu.h
@@ -87,23 +87,23 @@ s153
 i<Cocoa/Cocoa.h>
 
 N/Users/colin/Projects/audioplayer/build/Debug/audioplayer.app
-t1267440703
+t1267448698
 s102
 
 N/Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Info.plist
-t1267440564
+t1267442673
 s931
 
 N/Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/MacOS/audioplayer
-t1267440703
+t1267448698
 s17568
 
 N/Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/PkgInfo
-t1267440564
+t1267442673
 s8
 
 N/Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Resources/English.lproj/InfoPlist.strings
-t1267440564
+t1267442673
 s92
 
 N/Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Resources/English.lproj/MainMenu.nib
@@ -111,7 +111,7 @@ t1266936390
 s34447
 
 N/Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Resources/volume.png
-t1267440564
+t1267442673
 s179
 
 N/Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Resources/volume_16x12.png
@@ -119,16 +119,16 @@ t2
 s0
 
 N/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/NSSoundPlayer.o
-t1267440703
-s17112
+t1267448698
+s17200
 
 N/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/TrayMenu.o
-t1267440586
+t1267442682
 s30160
 
 N/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/audioplayer.LinkFileList
-c000000004B8AC657000000000000015A
-t1267385943
+c000000004B8BA3F1000000000000015A
+t1267442673
 s346
 
 N/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/audioplayerAppDelegate.o
@@ -136,7 +136,7 @@ t1266936447
 s24956
 
 N/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/main.o
-t1266936888
+t1267442682
 s17128
 
 N/Users/colin/Projects/audioplayer/main.m
@@ -157,7 +157,7 @@ t1264569329
 s179
 
 N/var/folders/HX/HXjbv+r3E3aOVijK9KnUvU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/audioplayer_Prefix-cpgjbyskuhnilihhppdtjnzhizeu/audioplayer_Prefix.pch.gch
-t1266936393
+t1267442682
 s54212368
 
 Naudioplayer-Info.plist
@@ -167,11 +167,11 @@ s1035
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies289133504#289133504#0(0"0(0#1#0"4300885448#0"0#
+lSLF07#2@18"Check dependencies289141497#289141497#0(0"0(0#1#0"4300885448#0"0#
 
 CCompileC build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/NSSoundPlayer.o /Users/colin/Projects/audioplayer/NSSoundPlayer.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s289133503.188092
-e289133503.313965
+s289141497.785864
+e289141498.113625
 r1
 xCompileC
 xbuild/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/NSSoundPlayer.o
@@ -183,12 +183,12 @@ xcom.apple.compilers.gcc.4_2
 o/Users/colin/Projects/audioplayer/NSSoundPlayer.m: In function '-[NSSoundPlayer play]':
 o/Users/colin/Projects/audioplayer/NSSoundPlayer.m:35: warning: format not a string literal and no format arguments
 o/Users/colin/Projects/audioplayer/NSSoundPlayer.m: In function '-[NSSoundPlayer playOrPause]':
-o/Users/colin/Projects/audioplayer/NSSoundPlayer.m:63: warning: assignment makes pointer from integer without a cast
-lSLF07#2@57"Compile /Users/colin/Projects/audioplayer/NSSoundPlayer.m289133503#289133503#0(414"/Users/colin/Projects/audioplayer/NSSoundPlayer.m: In function '-[NSSoundPlayer play]':/Users/colin/Projects/audioplayer/NSSoundPlayer.m:35: warning: format not a string literal and no format arguments/Users/colin/Projects/audioplayer/NSSoundPlayer.m: In function '-[NSSoundPlayer playOrPause]':/Users/colin/Projects/audioplayer/NSSoundPlayer.m:63: warning: assignment makes pointer from integer without a cast2(22@51"Format not a string literal and no format arguments289133503#88#115#0(6@49"/Users/colin/Projects/audioplayer/NSSoundPlayer.m289133502#35#0#35#0#51"format not a string literal and no format arguments0(22@52"Assignment makes pointer from integer without a cast289133503#298#116#0(6@49"/Users/colin/Projects/audioplayer/NSSoundPlayer.m289133502#63#0#63#0#0"0(0#0#49"/Users/colin/Projects/audioplayer/NSSoundPlayer.m4300885448#1493"    cd /Users/colin/Projects/audioplayer    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-generated-files.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-own-target-headers.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-all-target-headers.hmap -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-project-headers.hmap -F/Users/colin/Projects/audioplayer/build/Debug -I/Users/colin/Projects/audioplayer/build/Debug/include -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources/x86_64 -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources -include /var/folders/HX/HXjbv+r3E3aOVijK9KnUvU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/audioplayer_Prefix-cpgjbyskuhnilihhppdtjnzhizeu/audioplayer_Prefix.pch -c /Users/colin/Projects/audioplayer/NSSoundPlayer.m -o /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/NSSoundPlayer.o0#
+o/Users/colin/Projects/audioplayer/NSSoundPlayer.m:64: warning: assignment makes pointer from integer without a cast
+lSLF07#2@57"Compile /Users/colin/Projects/audioplayer/NSSoundPlayer.m289141497#289141498#0(414"/Users/colin/Projects/audioplayer/NSSoundPlayer.m: In function '-[NSSoundPlayer play]':/Users/colin/Projects/audioplayer/NSSoundPlayer.m:35: warning: format not a string literal and no format arguments/Users/colin/Projects/audioplayer/NSSoundPlayer.m: In function '-[NSSoundPlayer playOrPause]':/Users/colin/Projects/audioplayer/NSSoundPlayer.m:64: warning: assignment makes pointer from integer without a cast2(22@51"Format not a string literal and no format arguments289141498#88#115#0(6@49"/Users/colin/Projects/audioplayer/NSSoundPlayer.m289141496#35#0#35#0#51"format not a string literal and no format arguments0(22@52"Assignment makes pointer from integer without a cast289141498#298#116#0(6@49"/Users/colin/Projects/audioplayer/NSSoundPlayer.m289141496#64#0#64#0#0"0(0#0#49"/Users/colin/Projects/audioplayer/NSSoundPlayer.m4300885448#1493"    cd /Users/colin/Projects/audioplayer    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-generated-files.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-own-target-headers.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-all-target-headers.hmap -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-project-headers.hmap -F/Users/colin/Projects/audioplayer/build/Debug -I/Users/colin/Projects/audioplayer/build/Debug/include -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources/x86_64 -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources -include /var/folders/HX/HXjbv+r3E3aOVijK9KnUvU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/audioplayer_Prefix-cpgjbyskuhnilihhppdtjnzhizeu/audioplayer_Prefix.pch -c /Users/colin/Projects/audioplayer/NSSoundPlayer.m -o /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/NSSoundPlayer.o0#
 
 CCompileC build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/TrayMenu.o /Users/colin/Projects/audioplayer/TrayMenu.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s289133386.113801
-e289133386.344685
+s289135482.555499
+e289135482.733517
 r1
 xCompileC
 xbuild/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/TrayMenu.o
@@ -201,7 +201,7 @@ o/Users/colin/Projects/audioplayer/TrayMenu.m: In function '-[TrayMenu openWebsi
 o/Users/colin/Projects/audioplayer/TrayMenu.m:39: warning: format not a string literal and no format arguments
 o/Users/colin/Projects/audioplayer/TrayMenu.m:41: warning: 'directoryContentsAtPath:' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h:164)
 o/Users/colin/Projects/audioplayer/TrayMenu.m:19: warning: unused variable 'j'
-lSLF07#2@52"Compile /Users/colin/Projects/audioplayer/TrayMenu.m289133386#289133386#0(493"/Users/colin/Projects/audioplayer/TrayMenu.m: In function '-[TrayMenu openWebsite:]':/Users/colin/Projects/audioplayer/TrayMenu.m:39: warning: format not a string literal and no format arguments/Users/colin/Projects/audioplayer/TrayMenu.m:41: warning: 'directoryContentsAtPath:' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h:164)/Users/colin/Projects/audioplayer/TrayMenu.m:19: warning: unused variable 'j'3(22@51"Format not a string literal and no format arguments289133386#86#110#0(6@44"/Users/colin/Projects/audioplayer/TrayMenu.m289133384#39#0#39#0#51"format not a string literal and no format arguments0(22@160"'directoryContentsAtPath:' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h:164)289133386#196#219#0(6@44"/Users/colin/Projects/audioplayer/TrayMenu.m289133384#41#0#41#0#33"'*' is deprecated (declared at *)0(22@19"Unused variable 'j'289133386#415#78#0(6@44"/Users/colin/Projects/audioplayer/TrayMenu.m289133384#19#0#19#0#19"unused variable '*'0(0#0#44"/Users/colin/Projects/audioplayer/TrayMenu.m4300885448#1483"    cd /Users/colin/Projects/audioplayer    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-generated-files.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-own-target-headers.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-all-target-headers.hmap -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-project-headers.hmap -F/Users/colin/Projects/audioplayer/build/Debug -I/Users/colin/Projects/audioplayer/build/Debug/include -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources/x86_64 -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources -include /var/folders/HX/HXjbv+r3E3aOVijK9KnUvU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/audioplayer_Prefix-cpgjbyskuhnilihhppdtjnzhizeu/audioplayer_Prefix.pch -c /Users/colin/Projects/audioplayer/TrayMenu.m -o /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/TrayMenu.o0#
+lSLF07#2@52"Compile /Users/colin/Projects/audioplayer/TrayMenu.m289135482#289135482#0(493"/Users/colin/Projects/audioplayer/TrayMenu.m: In function '-[TrayMenu openWebsite:]':/Users/colin/Projects/audioplayer/TrayMenu.m:39: warning: format not a string literal and no format arguments/Users/colin/Projects/audioplayer/TrayMenu.m:41: warning: 'directoryContentsAtPath:' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h:164)/Users/colin/Projects/audioplayer/TrayMenu.m:19: warning: unused variable 'j'3(22@51"Format not a string literal and no format arguments289135482#86#110#0(6@44"/Users/colin/Projects/audioplayer/TrayMenu.m289133384#39#0#39#0#51"format not a string literal and no format arguments0(22@160"'directoryContentsAtPath:' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h:164)289135482#196#219#0(6@44"/Users/colin/Projects/audioplayer/TrayMenu.m289133384#41#0#41#0#33"'*' is deprecated (declared at *)0(22@19"Unused variable 'j'289135482#415#78#0(6@44"/Users/colin/Projects/audioplayer/TrayMenu.m289133384#19#0#19#0#19"unused variable '*'0(0#0#44"/Users/colin/Projects/audioplayer/TrayMenu.m4300885448#1483"    cd /Users/colin/Projects/audioplayer    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-generated-files.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-own-target-headers.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-all-target-headers.hmap -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-project-headers.hmap -F/Users/colin/Projects/audioplayer/build/Debug -I/Users/colin/Projects/audioplayer/build/Debug/include -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources/x86_64 -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources -include /var/folders/HX/HXjbv+r3E3aOVijK9KnUvU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/audioplayer_Prefix-cpgjbyskuhnilihhppdtjnzhizeu/audioplayer_Prefix.pch -c /Users/colin/Projects/audioplayer/TrayMenu.m -o /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/TrayMenu.o0#
 
 CCompileC build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/audioplayerAppDelegate.o /Users/colin/Projects/audioplayer/audioplayerAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
 s288629247.466233
@@ -217,8 +217,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@66"Compile /Users/colin/Projects/audioplayer/audioplayerAppDelegate.m288629247#288629247#0(0"0(0#0#58"/Users/colin/Projects/audioplayer/audioplayerAppDelegate.m4300885448#1511"    cd /Users/colin/Projects/audioplayer    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-generated-files.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-own-target-headers.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-all-target-headers.hmap -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-project-headers.hmap -F/Users/colin/Projects/audioplayer/build/Debug -I/Users/colin/Projects/audioplayer/build/Debug/include -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources/x86_64 -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources -include /var/folders/HX/HXjbv+r3E3aOVijK9KnUvU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/audioplayer_Prefix-cpgjbyskuhnilihhppdtjnzhizeu/audioplayer_Prefix.pch -c /Users/colin/Projects/audioplayer/audioplayerAppDelegate.m -o /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/audioplayerAppDelegate.o0#
 
 CCompileC build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/main.o /Users/colin/Projects/audioplayer/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s288629687.905564
-e288629688.197111
+s289135482.518471
+e289135482.744743
 r1
 xCompileC
 xbuild/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/main.o
@@ -227,7 +227,7 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@48"Compile /Users/colin/Projects/audioplayer/main.m288629687#288629688#0(0"0(0#0#40"/Users/colin/Projects/audioplayer/main.m4300885448#1475"    cd /Users/colin/Projects/audioplayer    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-generated-files.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-own-target-headers.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-all-target-headers.hmap -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-project-headers.hmap -F/Users/colin/Projects/audioplayer/build/Debug -I/Users/colin/Projects/audioplayer/build/Debug/include -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources/x86_64 -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources -include /var/folders/HX/HXjbv+r3E3aOVijK9KnUvU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/audioplayer_Prefix-cpgjbyskuhnilihhppdtjnzhizeu/audioplayer_Prefix.pch -c /Users/colin/Projects/audioplayer/main.m -o /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/main.o0#
+lSLF07#2@48"Compile /Users/colin/Projects/audioplayer/main.m289135482#289135482#0(0"0(0#0#40"/Users/colin/Projects/audioplayer/main.m4300885448#1475"    cd /Users/colin/Projects/audioplayer    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-generated-files.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-own-target-headers.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-all-target-headers.hmap -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-project-headers.hmap -F/Users/colin/Projects/audioplayer/build/Debug -I/Users/colin/Projects/audioplayer/build/Debug/include -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources/x86_64 -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources -include /var/folders/HX/HXjbv+r3E3aOVijK9KnUvU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/audioplayer_Prefix-cpgjbyskuhnilihhppdtjnzhizeu/audioplayer_Prefix.pch -c /Users/colin/Projects/audioplayer/main.m -o /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/main.o0#
 
 CCompileXIB /Users/colin/Projects/audioplayer/English.lproj/MainMenu.xib
 s288629190.241567
@@ -238,48 +238,48 @@ x/Users/colin/Projects/audioplayer/English.lproj/MainMenu.xib
 lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib288629190#288629190#0(0"0(0#0#60"/Users/colin/Projects/audioplayer/English.lproj/MainMenu.xib4300885448#316"    cd /Users/colin/Projects/audioplayer    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Resources/English.lproj/MainMenu.nib /Users/colin/Projects/audioplayer/English.lproj/MainMenu.xib0#
 
 CCopyStringsFile /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-s289133364.490365
-e289133364.926505
+s289135473.666169
+e289135473.792524
 r1
 xCopyStringsFile
 x/Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Resources/English.lproj/InfoPlist.strings
 xEnglish.lproj/InfoPlist.strings
-lSLF07#2@36"Copy English.lproj/InfoPlist.strings289133364#289133364#0(0"0(0#0#65"/Users/colin/Projects/audioplayer/English.lproj/InfoPlist.strings4300885448#359"    cd /Users/colin/Projects/audioplayer    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Resources/English.lproj0#
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings289135473#289135473#0(0"0(0#0#65"/Users/colin/Projects/audioplayer/English.lproj/InfoPlist.strings4300885448#359"    cd /Users/colin/Projects/audioplayer    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Resources/English.lproj0#
 
 CCpResource build/Debug/audioplayer.app/Contents/Resources/volume.png volume.png
-s289133364.523440
-e289133364.611184
+s289135473.668543
+e289135473.685970
 r1
 xCpResource
 xbuild/Debug/audioplayer.app/Contents/Resources/volume.png
 xvolume.png
-lSLF07#2@15"Copy volume.png289133364#289133364#0(0"0(0#0#44"/Users/colin/Projects/audioplayer/volume.png4300885448#315"    cd /Users/colin/Projects/audioplayer    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/colin/Projects/audioplayer/volume.png /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Resources0#
+lSLF07#2@15"Copy volume.png289135473#289135473#0(0"0(0#0#44"/Users/colin/Projects/audioplayer/volume.png4300885448#315"    cd /Users/colin/Projects/audioplayer    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/colin/Projects/audioplayer/volume.png /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Resources0#
 
 CCpResource build/Debug/audioplayer.app/Contents/Resources/volume_16x12.png volume_16x12.png
 r0
 
 CLd /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/MacOS/audioplayer normal x86_64
-s289133503.314050
-e289133503.345297
+s289141498.114236
+e289141498.145198
 r1
 xLd
 x/Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/MacOS/audioplayer
 xnormal
 xx86_64
-lSLF07#2@93"Link /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/MacOS/audioplayer289133503#289133503#0(0"0(0#0#0"4300885448#537"    cd /Users/colin/Projects/audioplayer    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/colin/Projects/audioplayer/build/Debug -F/Users/colin/Projects/audioplayer/build/Debug -filelist /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/audioplayer.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/MacOS/audioplayer0#
+lSLF07#2@93"Link /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/MacOS/audioplayer289141498#289141498#0(0"0(0#0#0"4300885448#537"    cd /Users/colin/Projects/audioplayer    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/colin/Projects/audioplayer/build/Debug -F/Users/colin/Projects/audioplayer/build/Debug -filelist /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/Objects-normal/x86_64/audioplayer.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/MacOS/audioplayer0#
 
 CProcessInfoPlistFile /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Info.plist audioplayer-Info.plist
-s289133364.457828
-e289133364.490145
+s289135473.650945
+e289135473.666060
 r1
 xProcessInfoPlistFile
 x/Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Info.plist
 xaudioplayer-Info.plist
-lSLF07#2@30"Process audioplayer-Info.plist289133364#289133364#0(0"0(0#0#56"/Users/colin/Projects/audioplayer/audioplayer-Info.plist31244173393002612#307"    cd /Users/colin/Projects/audioplayer    builtin-infoPlistUtility audioplayer-Info.plist -genpkginfo /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Info.plist0#
+lSLF07#2@30"Process audioplayer-Info.plist289135473#289135473#0(0"0(0#0#56"/Users/colin/Projects/audioplayer/audioplayer-Info.plist31244173393002612#307"    cd /Users/colin/Projects/audioplayer    builtin-infoPlistUtility audioplayer-Info.plist -genpkginfo /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app/Contents/Info.plist0#
 
 CProcessPCH /var/folders/HX/HXjbv+r3E3aOVijK9KnUvU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/audioplayer_Prefix-cpgjbyskuhnilihhppdtjnzhizeu/audioplayer_Prefix.pch.gch audioplayer_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s288629190.618011
-e288629193.647349
+s289135473.792646
+e289135482.518299
 r1
 xProcessPCH
 x/var/folders/HX/HXjbv+r3E3aOVijK9KnUvU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/audioplayer_Prefix-cpgjbyskuhnilihhppdtjnzhizeu/audioplayer_Prefix.pch.gch
@@ -288,13 +288,13 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@33"Precompile audioplayer_Prefix.pch288629190#288629193#0(0"0(0#0#56"/Users/colin/Projects/audioplayer/audioplayer_Prefix.pch4300885448#1382"    cd /Users/colin/Projects/audioplayer    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-generated-files.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-own-target-headers.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-all-target-headers.hmap -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-project-headers.hmap -F/Users/colin/Projects/audioplayer/build/Debug -I/Users/colin/Projects/audioplayer/build/Debug/include -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources/x86_64 -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources -c /Users/colin/Projects/audioplayer/audioplayer_Prefix.pch -o /var/folders/HX/HXjbv+r3E3aOVijK9KnUvU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/audioplayer_Prefix-cpgjbyskuhnilihhppdtjnzhizeu/audioplayer_Prefix.pch.gch0#
+lSLF07#2@33"Precompile audioplayer_Prefix.pch289135473#289135482#0(0"0(0#0#56"/Users/colin/Projects/audioplayer/audioplayer_Prefix.pch4300885448#1382"    cd /Users/colin/Projects/audioplayer    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-generated-files.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-own-target-headers.hmap -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-all-target-headers.hmap -iquote /Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/audioplayer-project-headers.hmap -F/Users/colin/Projects/audioplayer/build/Debug -I/Users/colin/Projects/audioplayer/build/Debug/include -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources/x86_64 -I/Users/colin/Projects/audioplayer/build/audioplayer.build/Debug/audioplayer.build/DerivedSources -c /Users/colin/Projects/audioplayer/audioplayer_Prefix.pch -o /var/folders/HX/HXjbv+r3E3aOVijK9KnUvU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/audioplayer_Prefix-cpgjbyskuhnilihhppdtjnzhizeu/audioplayer_Prefix.pch.gch0#
 
 CTouch /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app
-s289133503.345367
-e289133503.356774
+s289141498.145285
+e289141498.147338
 r1
 xTouch
 x/Users/colin/Projects/audioplayer/build/Debug/audioplayer.app
-lSLF07#2@67"Touch /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app289133503#289133503#0(0"0(0#0#0"4300885448#125"    cd /Users/colin/Projects/audioplayer    /usr/bin/touch -c /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app0#
+lSLF07#2@67"Touch /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app289141498#289141498#0(0"0(0#0#0"4300885448#125"    cd /Users/colin/Projects/audioplayer    /usr/bin/touch -c /Users/colin/Projects/audioplayer/build/Debug/audioplayer.app0#
 

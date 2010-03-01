@@ -83,11 +83,6 @@ NSSoundPlayer *_player;
 						keyEquivalent:@""];
 	[menuItem setTarget:self];
 	
-	menuItem = [menu addItemWithTitle:@"Stop"
-							   action:@selector(stopPlaying:)
-						keyEquivalent:@""];
-	[menuItem setTarget:self];
-	
 	menuItem = [menu addItemWithTitle:@"Skip"
 							   action:@selector(skipPlaying:)
 						keyEquivalent:@""];

@@ -37,6 +37,7 @@ BOOL *_paused;
 		[_files removeObjectAtIndex:0];
 	
 		_sound = [[NSSound alloc] initWithContentsOfFile:file byReference:NO];
+		[_sound setDelegate:self];
 		[_sound play];
 	}
 }
@@ -47,7 +48,7 @@ BOOL *_paused;
 
 - (void)skip {
 	[_sound stop];
-	[self play];
+	//[self play];
 }
 
 - (void)sound:(NSSound *)sound didFinishPlaying:(BOOL)finishedPlaying {
