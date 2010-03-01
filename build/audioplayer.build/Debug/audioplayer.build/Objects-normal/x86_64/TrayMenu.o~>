@@ -1,4 +1,0 @@
-/Users/colin/Projects/audioplayer/TrayMenu.m: In function '-[TrayMenu openWebsite:]':
-/Users/colin/Projects/audioplayer/TrayMenu.m:39: warning: format not a string literal and no format arguments
-/Users/colin/Projects/audioplayer/TrayMenu.m:41: warning: 'directoryContentsAtPath:' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h:164)
-/Users/colin/Projects/audioplayer/TrayMenu.m:19: warning: unused variable 'j'
