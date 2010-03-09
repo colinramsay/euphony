@@ -148,7 +148,63 @@ NSMenuItem *_shuffleMenu;
 	[_statusItem setImage:[NSImage imageNamed:@"volume.png"]];
 	
 	[menu release];
+	[self registerHotKeys];
 	[self openWebsite:self];
+}
+
+- (void) registerHotKeys
+{
+	EventHotKeyRef gMyHotKeyRef;
+	EventHotKeyID gMyHotKeyID;
+	EventTypeSpec eventType;
+	eventType.eventClass=kEventClassKeyboard;
+	eventType.eventKind=kEventHotKeyPressed;
+	
+	InstallApplicationEventHandler( NewEventHandlerUPP(HotKeyEventHandlerProc),1, &eventType, 0, NULL );
+    
+	EventHotKeyID rightArrowID = { 'Arow', 1 };
+	EventHotKeyID downArrowID = { 'Arow', 4 };
+	
+	gMyHotKeyID.signature='htk1';
+	gMyHotKeyID.id=1;
+	RegisterEventHotKey(124, cmdKey+optionKey+controlKey+shiftKey, rightArrowID, GetApplicationEventTarget(), 0, &gMyHotKeyRef);
+	
+	gMyHotKeyID.signature='htk2';
+	gMyHotKeyID.id=2;
+	RegisterEventHotKey(125, cmdKey+optionKey+controlKey+shiftKey, downArrowID, GetApplicationEventTarget(), 0, &gMyHotKeyRef);
+}
+
+OSStatus HotKeyEventHandlerProc( EventHandlerCallRef inCallRef, EventRef inEvent, void* inUserData )
+{
+	EventHotKeyID hotKeyID;
+	GetEventParameter( inEvent, kEventParamDirectObject, typeEventHotKeyID, NULL, sizeof(EventHotKeyID), NULL, &hotKeyID );
+
+
+	
+	switch (hotKeyID.id) {
+		case 1:
+			[_player skip];
+			break;
+		case 4:
+			[_player playOrPause];
+			break;
+	}	
+}
+
+OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler, EventRef theEvent, void* userData)
+{
+	EventHotKeyID hkCom;
+	
+	int l = hkCom.id;
+	
+	switch (l) {
+		case 1:
+			//[self pausePlaying:self];
+			break;
+		case 2:
+			//[self pausePlaying:self];
+			break;
+	}
 }
 
 @end

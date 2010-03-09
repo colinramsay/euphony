@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Carbon/Carbon.h>
 
 
 @interface TrayMenu : NSObject {
 	@private
 		NSStatusItem *_statusItem;
 }
+static	OSStatus	HotKeyEventHandlerProc( EventHandlerCallRef inCallRef, EventRef inEvent, void* inUserData );
+
 @end
