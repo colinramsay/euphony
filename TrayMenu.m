@@ -12,6 +12,7 @@
 @implementation TrayMenu
 
 NSSoundPlayer *_player;
+NSMenuItem *_shuffleMenu;
 
 - (void) openWebsite:(id)sender {
 
@@ -25,31 +26,47 @@ NSSoundPlayer *_player;
 	
 	// Display the dialog.  If the OK button was pressed,
 	// process the files.
-	if ( [openDlg runModalForDirectory:nil file:nil] == NSOKButton )
+	if ( [openDlg runModalForDirectory:@"~/Music" file:nil] == NSOKButton )
 	{
+		// make sure we not already playing . . . 
+		[_player playOrPause];
+		
 		// Get an array containing the full filenames of all
 		// files and directories selected.
 		NSArray* selectedItems = [openDlg filenames];
+		NSMutableArray *musicItems = [[NSMutableArray alloc] init];
+		NSString *file;
+		NSFileManager *localFileManager=[[NSFileManager alloc] init];
+		NSString* dir;
 		
 		// Loop through all the files and process them.
 		for( i = 0; i < [selectedItems count]; i++ )
 		{
-			NSString* dir = [selectedItems objectAtIndex:i];
+			NSString* currentDir = [selectedItems objectAtIndex:i];
+			NSLog(currentDir);
 			
-			NSLog(dir);
-			
-			NSArray *dirContents = [[NSFileManager defaultManager] directoryContentsAtPath:dir];
-			
-			_player = [[NSSoundPlayer alloc] initWithFiles:dir :dirContents];
-			[_player play];
-			
+			NSDirectoryEnumerator *dirEnum = [localFileManager enumeratorAtPath:currentDir];			
+			while (file = [dirEnum nextObject]) {
+				if ([[file pathExtension] isEqualToString: @"mp3"]) {
+					// process the document
+					NSLog(file);
+					[musicItems addObject:[[NSString alloc]initWithFormat: @"%@/%@", currentDir, file]];
+				}
+			}
 			break;
 		}
+		
+		// mix it up a little
+//		if ([musicItems count] > 1) {
+//			for (NSUInteger shuffleIndex = [musicItems count] - 1; shuffleIndex > 0; shuffleIndex--) {
+//				srandom(time(NULL));
+//				[musicItems exchangeObjectAtIndex:shuffleIndex withObjectAtIndex:random() % (shuffleIndex + 1)];
+//			}
+//		}
+		_player = [[NSSoundPlayer alloc] initWithFiles:musicItems];
+		[_player play];		
 	}
-	
-
 }
-
 
 - (void) pausePlaying:(id)sender {
 	[_player playOrPause];
@@ -61,6 +78,17 @@ NSSoundPlayer *_player;
 
 - (void) skipPlaying:(id)sender {
 	[_player skip];
+}
+
+- (void) toggleShuffle:(id)sender {
+	
+	if ([_player toggleShuffle]) {
+			[_shuffleMenu setState:1];
+	}
+	else {		
+			[_shuffleMenu setState:0];
+	}
+
 }
 
 - (void) actionQuit:(id)sender {
@@ -81,12 +109,20 @@ NSSoundPlayer *_player;
 	menuItem = [menu addItemWithTitle:@"Open Folder"
 							   action:@selector(openWebsite:)
 						keyEquivalent:@""];
+	[menuItem setToolTip:@"Open Tracks"];
 	[menuItem setTarget:self];
 	
 	menuItem = [menu addItemWithTitle:@"Skip"
 							   action:@selector(skipPlaying:)
 						keyEquivalent:@""];
+	[menuItem setToolTip:@"Skip Track"];
 	[menuItem setTarget:self];
+	
+	_shuffleMenu =[menu addItemWithTitle:@"Shuffle"
+							  action:@selector(toggleShuffle:)
+					   keyEquivalent:@""];
+	[_shuffleMenu setToolTip:@"Shuffle Play"];
+	[_shuffleMenu setTarget:self];
 	
 	// Add Separator
 	[menu addItem:[NSMenuItem separatorItem]];
@@ -108,10 +144,11 @@ NSSoundPlayer *_player;
 					statusItemWithLength:NSSquareStatusItemLength] retain];
 	[_statusItem setMenu:menu];
 	[_statusItem setHighlightMode:YES];
-	[_statusItem setToolTip:@"Test Tray"];
-	[_statusItem setImage:[NSImage imageNamed:@"volume"]];
+	[_statusItem setToolTip:@"osxplayer"];
+	[_statusItem setImage:[NSImage imageNamed:@"volume.png"]];
 	
 	[menu release];
+	[self openWebsite:self];
 }
 
 @end

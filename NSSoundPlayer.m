@@ -7,39 +7,72 @@
 //
 
 #import "NSSoundPlayer.h"
-
+#import <Growl/Growl.h>
 
 @implementation NSSoundPlayer
 
 NSMutableArray *_files;
 NSSound *_sound;
-NSString *_directory;
 BOOL *_paused;
+BOOL *_shuffle = FALSE;
+int *_trackNumber;
 
-- (id)initWithFiles:(NSString *) directory :(NSArray *)files {
+- (id)initWithFiles:(NSArray *)files {
 	if (self = [super init]) {
 		_files = [[NSMutableArray alloc] initWithArray:files];
-		_directory = directory;
-		[_directory retain];
 	}
+	
+	NSBundle *myBundle = [NSBundle bundleForClass:[NSSoundPlayer class]]; 
+	NSString *growlPath = [[myBundle privateFrameworksPath] stringByAppendingPathComponent:@"Growl.framework"]; 
+	NSBundle *growlBundle = [NSBundle bundleWithPath:growlPath]; 
+	
+	if (growlBundle && [growlBundle load]) { 
+		// Register ourselves as a Growl delegate 
+		[GrowlApplicationBridge setGrowlDelegate:self]; 
+	} 
+	else { 
+		NSLog(@"Could not load Growl.framework"); 
+	}
+	
 	return self;
 }
 
 - (void)play {
 	
 	if([_files count] > 0) {
-	
-		NSString *next = [_files objectAtIndex:0];
-		NSString *file = [[NSString alloc]initWithFormat: @"%@/%@", _directory, next];
-
-		NSLog(file);
-	
-		[_files removeObjectAtIndex:0];
-	
-		_sound = [[NSSound alloc] initWithContentsOfFile:file byReference:NO];
+		
+		_trackNumber = 0;
+		if (_shuffle)
+		{
+			srandom(time(NULL));
+			_trackNumber = random() % [_files count];
+		}
+		
+		NSString *next = [_files objectAtIndex:_trackNumber];
+		NSLog(next);
+		
+		[GrowlApplicationBridge notifyWithTitle:@"audioplayer"
+									description:[[NSString alloc]initWithFormat: @"%@", [next lastPathComponent]]
+							   notificationName:@"Current Song"
+									   iconData:nil
+									   priority:0
+									   isSticky:NO
+								   clickContext:[NSDate date]];
+		
+		[_files removeObjectAtIndex:_trackNumber];	
+		_sound = [[NSSound alloc] initWithContentsOfFile:next byReference:NO];
 		[_sound setDelegate:self];
 		[_sound play];
 	}
+}
+
+- (BOOL)toggleShuffle {
+	if(_shuffle) {
+		_shuffle = FALSE;
+	} else{
+		_shuffle = TRUE;
+	}	
+	return _shuffle;
 }
 
 - (void)stop {
