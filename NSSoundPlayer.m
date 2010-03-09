@@ -16,6 +16,7 @@ NSSound *_sound;
 BOOL *_paused;
 BOOL *_shuffle = FALSE;
 int *_trackNumber;
+NSData *_growlIcon;
 
 - (id)initWithFiles:(NSArray *)files {
 	if (self = [super init]) {
@@ -25,6 +26,11 @@ int *_trackNumber;
 	NSBundle *myBundle = [NSBundle bundleForClass:[NSSoundPlayer class]]; 
 	NSString *growlPath = [[myBundle privateFrameworksPath] stringByAppendingPathComponent:@"Growl.framework"]; 
 	NSBundle *growlBundle = [NSBundle bundleWithPath:growlPath]; 
+	NSString *myImagePath = [[[NSBundle mainBundle] resourcePath]  stringByAppendingPathComponent:@"vol_white.icns"];
+
+	NSImage *img = [[NSImage alloc] initWithContentsOfFile:myImagePath];
+	_growlIcon = [img TIFFRepresentation];
+	[_growlIcon retain];
 	
 	if (growlBundle && [growlBundle load]) { 
 		// Register ourselves as a Growl delegate 
@@ -54,7 +60,7 @@ int *_trackNumber;
 		[GrowlApplicationBridge notifyWithTitle:@"audioplayer"
 									description:[[NSString alloc]initWithFormat: @"%@", [next lastPathComponent]]
 							   notificationName:@"Current Song"
-									   iconData:nil
+									   iconData:_growlIcon
 									   priority:0
 									   isSticky:NO
 								   clickContext:[NSDate date]];
