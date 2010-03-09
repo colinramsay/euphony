@@ -10,6 +10,8 @@
 		3B69C66F113B1EF700072406 /* volume.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B69C66E113B1EF700072406 /* volume.png */; };
 		3BA6544F113AFDC500BAA092 /* NSSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA6544E113AFDC500BAA092 /* NSSoundPlayer.m */; };
 		3BB8327A1134237C0008A025 /* TrayMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB832791134237C0008A025 /* TrayMenu.m */; };
+		3BF66D4911466D7E00C6D004 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 3BF66D4811466D7E00C6D004 /* Growl Registration Ticket.growlRegDict */; };
+		3BF66D4A11466D8B00C6D004 /* Growl Registration Ticket.growlRegDict in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3BF66D4811466D7E00C6D004 /* Growl Registration Ticket.growlRegDict */; };
 		5472E5C611466604004FF888 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5401438B11466597005269FD /* Growl.framework */; };
 		54E1E8DF1146666400832C16 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5401438B11466597005269FD /* Growl.framework */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -24,6 +26,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				3BF66D4A11466D8B00C6D004 /* Growl Registration Ticket.growlRegDict in CopyFiles */,
 				5472E5C611466604004FF888 /* Growl.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +46,7 @@
 		3BA6544E113AFDC500BAA092 /* NSSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSoundPlayer.m; sourceTree = "<group>"; };
 		3BB832781134237C0008A025 /* TrayMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrayMenu.h; sourceTree = "<group>"; };
 		3BB832791134237C0008A025 /* TrayMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrayMenu.m; sourceTree = "<group>"; };
+		3BF66D4811466D7E00C6D004 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		5401438B11466597005269FD /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* audioplayer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "audioplayer-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* audioplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = audioplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				3B69C66E113B1EF700072406 /* volume.png */,
+				3BF66D4811466D7E00C6D004 /* Growl Registration Ticket.growlRegDict */,
 				8D1107310486CEB800E47090 /* audioplayer-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
@@ -185,6 +190,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				3B69C66F113B1EF700072406 /* volume.png in Resources */,
+				3BF66D4911466D7E00C6D004 /* Growl Registration Ticket.growlRegDict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
