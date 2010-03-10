@@ -64,12 +64,13 @@ NSString *_next;
 		_next = [_files objectAtIndex:_trackNumber];
 		NSLog(_next);
 		
-		[self displayMessage:@"Current Song" :@"audioplayer" :[[NSString alloc]initWithFormat: @"%@", [_next lastPathComponent]]];		
+		[_player displayInfo];
 		
 		[_files removeObjectAtIndex:_trackNumber];	
 		_sound = [[NSSound alloc] initWithContentsOfFile:_next byReference:NO];
 		[_sound setDelegate:self];
 		[_sound play];
+		_paused = FALSE;
 	}
 }
 
