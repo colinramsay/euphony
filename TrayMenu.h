@@ -11,9 +11,14 @@
 
 
 @interface TrayMenu : NSObject {
-	@private
+	@private 
 		NSStatusItem *_statusItem;
 }
-static	OSStatus	HotKeyEventHandlerProc( EventHandlerCallRef inCallRef, EventRef inEvent, void* inUserData );
+
+
+static	OSStatus HotKeyEventHandlerProc( EventHandlerCallRef inCallRef, EventRef inEvent, void* inUserData );
+
+-(void)toggleShuffle;
+-(void)registerHotKeys;
 
 @end

@@ -11,13 +11,13 @@
 
 @implementation TrayMenu
 
-NSSoundPlayer *_player;
-NSMenuItem *_shuffleMenu;
+static NSSoundPlayer *_player;
+static NSMenuItem *_shuffleMenu;
+TrayMenu *_self;
 
 - (void) openWebsite:(id)sender {
 
-	int i; // Loop counter.
-	int j;
+	//int i; // Loop counter.
 	// Create the File Open Dialog class.
 	NSOpenPanel* openDlg = [NSOpenPanel openPanel];
 	
@@ -37,10 +37,9 @@ NSMenuItem *_shuffleMenu;
 		NSMutableArray *musicItems = [[NSMutableArray alloc] init];
 		NSString *file;
 		NSFileManager *localFileManager=[[NSFileManager alloc] init];
-		NSString* dir;
 		
 		// Loop through all the files and process them.
-		for( i = 0; i < [selectedItems count]; i++ )
+		for( int i = 0; i < [selectedItems count]; i++ )
 		{
 			NSString* currentDir = [selectedItems objectAtIndex:i];
 			NSLog(currentDir);
@@ -56,13 +55,6 @@ NSMenuItem *_shuffleMenu;
 			break;
 		}
 		
-		// mix it up a little
-//		if ([musicItems count] > 1) {
-//			for (NSUInteger shuffleIndex = [musicItems count] - 1; shuffleIndex > 0; shuffleIndex--) {
-//				srandom(time(NULL));
-//				[musicItems exchangeObjectAtIndex:shuffleIndex withObjectAtIndex:random() % (shuffleIndex + 1)];
-//			}
-//		}
 		_player = [[NSSoundPlayer alloc] initWithFiles:musicItems];
 		[_player play];		
 	}
@@ -80,15 +72,14 @@ NSMenuItem *_shuffleMenu;
 	[_player skip];
 }
 
-- (void) toggleShuffle:(id)sender {
+- (void) toggleShuffle {
 	
 	if ([_player toggleShuffle]) {
-			[_shuffleMenu setState:1];
+		[_shuffleMenu setState:1];
 	}
 	else {		
-			[_shuffleMenu setState:0];
+		[_shuffleMenu setState:0];
 	}
-
 }
 
 - (void) actionQuit:(id)sender {
@@ -119,8 +110,8 @@ NSMenuItem *_shuffleMenu;
 	[menuItem setTarget:self];
 	
 	_shuffleMenu =[menu addItemWithTitle:@"Shuffle"
-							  action:@selector(toggleShuffle:)
-					   keyEquivalent:@""];
+								  action:@selector(toggleShuffle)
+						   keyEquivalent:@""];
 	[_shuffleMenu setToolTip:@"Shuffle Play"];
 	[_shuffleMenu setTarget:self];
 	
@@ -150,6 +141,7 @@ NSMenuItem *_shuffleMenu;
 	[menu release];
 	[self registerHotKeys];
 	[self openWebsite:self];
+	_self = self;
 }
 
 - (void) registerHotKeys
@@ -160,14 +152,18 @@ NSMenuItem *_shuffleMenu;
 	eventType.eventKind=kEventHotKeyPressed;
 	
 	InstallApplicationEventHandler( NewEventHandlerUPP(HotKeyEventHandlerProc),1, &eventType, 0, NULL );
-    
-	EventHotKeyID rightArrowID = { 'Arow', 1 };
-	EventHotKeyID downArrowID = { 'Arow', 2 };
-	EventHotKeyID questionMarkID = { 'Arow', 3 };
-		
-	RegisterEventHotKey(124, cmdKey+optionKey+controlKey+shiftKey, rightArrowID, GetApplicationEventTarget(), 0, &gMyHotKeyRef);
-	RegisterEventHotKey(125, cmdKey+optionKey+controlKey+shiftKey, downArrowID, GetApplicationEventTarget(), 0, &gMyHotKeyRef);
-	RegisterEventHotKey(44, cmdKey+optionKey+controlKey+shiftKey, questionMarkID, GetApplicationEventTarget(), 0, &gMyHotKeyRef);
+	
+	EventHotKeyID hk1 = { 'Arow', 1 }; // s
+	EventHotKeyID hk31 = { 'Arow', 31 }; // o
+	EventHotKeyID hk44 = { 'Arow', 44 }; // ?
+	EventHotKeyID hk124 = { 'Arow', 124 }; // right arrow
+	EventHotKeyID hk125 = { 'Arow', 125 }; // down arrow
+	
+	RegisterEventHotKey(1, cmdKey+optionKey+controlKey+shiftKey, hk1, GetApplicationEventTarget(), 0, &gMyHotKeyRef);
+	RegisterEventHotKey(31, cmdKey+optionKey+controlKey+shiftKey, hk31, GetApplicationEventTarget(), 0, &gMyHotKeyRef);
+	RegisterEventHotKey(44, cmdKey+optionKey+controlKey+shiftKey, hk44, GetApplicationEventTarget(), 0, &gMyHotKeyRef);
+	RegisterEventHotKey(124, cmdKey+optionKey+controlKey+shiftKey, hk124, GetApplicationEventTarget(), 0, &gMyHotKeyRef);
+	RegisterEventHotKey(125, cmdKey+optionKey+controlKey+shiftKey, hk125, GetApplicationEventTarget(), 0, &gMyHotKeyRef);	
 }
 
 OSStatus HotKeyEventHandlerProc( EventHandlerCallRef inCallRef, EventRef inEvent, void* inUserData )
@@ -177,32 +173,21 @@ OSStatus HotKeyEventHandlerProc( EventHandlerCallRef inCallRef, EventRef inEvent
 	
 	switch (hotKeyID.id) {
 		case 1:
-			[_player skip];
+			[_self toggleShuffle];
 			break;
-		case 2:
-			[_player playOrPause];
+		case 31:
+			[_self openWebsite:_self];
 			break;
-		case 3:
+		case 44:
 			[_player displayInfo];
 			break;
-
+		case 124:
+			[_player skip];
+			break;
+		case 125:
+			[_player playOrPause];
+			break;
 	}	
-}
-
-OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler, EventRef theEvent, void* userData)
-{
-	EventHotKeyID hkCom;
-	
-	int l = hkCom.id;
-	
-	switch (l) {
-		case 1:
-			//[self pausePlaying:self];
-			break;
-		case 2:
-			//[self pausePlaying:self];
-			break;
-	}
 }
 
 @end

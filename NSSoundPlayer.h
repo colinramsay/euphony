@@ -13,9 +13,13 @@
 
 }
 
--(id)initWithFiles:(NSString *)directory :(NSArray *)files;
+-(id)initWithFiles:(NSArray *)files;
 -(void)play;
 -(void)stop;
 -(void)skip;
 -(void)playOrPause;
+-(void)displayInfo;
+-(BOOL)toggleShuffle;
+-(void)displayMessage:(NSString *)notification :(NSString *)title :(NSString *)description;
+
 @end

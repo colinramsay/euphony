@@ -12,8 +12,8 @@
 @implementation NSSoundPlayer
 
 NSMutableArray *_files;
-NSSound *_sound;
-BOOL *_paused;
+static NSSound *_sound;
+BOOL *_paused = TRUE;
 BOOL *_shuffle = FALSE;
 int *_trackNumber;
 NSData *_growlIcon;
@@ -47,12 +47,9 @@ NSString *_next;
 - (void)play {
 	
 	if([_files count] > 0) {
-		
-		if ( ! _paused)
-		{
-			[self playOrPause];
-			_sound = NULL;
-		}
+
+		[self playOrPause];
+		_sound = NULL;
 		
 		_trackNumber = 0;
 		if (_shuffle)
@@ -61,16 +58,15 @@ NSString *_next;
 			_trackNumber = random() % [_files count];
 		}
 		
-		_next = [_files objectAtIndex:_trackNumber];
+		_next = [_files objectAtIndex:(NSInteger)_trackNumber];
 		NSLog(_next);
 		
 		[self displayInfo];
 		
-		[_files removeObjectAtIndex:_trackNumber];	
+		[_files removeObjectAtIndex:(NSInteger)_trackNumber];	
 		_sound = [[NSSound alloc] initWithContentsOfFile:_next byReference:NO];
 		[_sound setDelegate:self];
 		[_sound play];
-		_paused = FALSE;
 	}
 }
 
@@ -89,7 +85,6 @@ NSString *_next;
 
 - (void)skip {
 	[_sound stop];
-	//[self play];
 }
 
 - (void)sound:(NSSound *)sound didFinishPlaying:(BOOL)finishedPlaying {
