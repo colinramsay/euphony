@@ -64,7 +64,7 @@ NSString *_next;
 		_next = [_files objectAtIndex:_trackNumber];
 		NSLog(_next);
 		
-		[_player displayInfo];
+		[self displayInfo];
 		
 		[_files removeObjectAtIndex:_trackNumber];	
 		_sound = [[NSSound alloc] initWithContentsOfFile:_next byReference:NO];
