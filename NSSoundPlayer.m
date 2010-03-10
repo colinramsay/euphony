@@ -17,6 +17,7 @@ BOOL *_paused;
 BOOL *_shuffle = FALSE;
 int *_trackNumber;
 NSData *_growlIcon;
+NSString *_next;
 
 - (id)initWithFiles:(NSArray *)files {
 	if (self = [super init]) {
@@ -47,6 +48,12 @@ NSData *_growlIcon;
 	
 	if([_files count] > 0) {
 		
+		if ( ! _paused)
+		{
+			[self playOrPause];
+			_sound = NULL;
+		}
+		
 		_trackNumber = 0;
 		if (_shuffle)
 		{
@@ -54,19 +61,13 @@ NSData *_growlIcon;
 			_trackNumber = random() % [_files count];
 		}
 		
-		NSString *next = [_files objectAtIndex:_trackNumber];
-		NSLog(next);
+		_next = [_files objectAtIndex:_trackNumber];
+		NSLog(_next);
 		
-		[GrowlApplicationBridge notifyWithTitle:@"audioplayer"
-									description:[[NSString alloc]initWithFormat: @"%@", [next lastPathComponent]]
-							   notificationName:@"Current Song"
-									   iconData:_growlIcon
-									   priority:0
-									   isSticky:NO
-								   clickContext:[NSDate date]];
+		[self displayMessage:@"Current Song" :@"audioplayer" :[[NSString alloc]initWithFormat: @"%@", [_next lastPathComponent]]];		
 		
 		[_files removeObjectAtIndex:_trackNumber];	
-		_sound = [[NSSound alloc] initWithContentsOfFile:next byReference:NO];
+		_sound = [[NSSound alloc] initWithContentsOfFile:_next byReference:NO];
 		[_sound setDelegate:self];
 		[_sound play];
 	}
@@ -102,6 +103,21 @@ NSData *_growlIcon;
 		[_sound pause];
 		_paused = TRUE;
 	}
+}
+
+- (void)displayInfo {
+	[self displayMessage:@"Current Song" :@"audioplayer" :[[NSString alloc]initWithFormat: @"%@", [_next lastPathComponent]]];		
+}
+
+- (void)displayMessage:(NSString *)notification :(NSString *)title :(NSString *)description{
+	
+	[GrowlApplicationBridge notifyWithTitle:title
+								description:description
+						   notificationName:notification
+								   iconData:_growlIcon
+								   priority:0
+								   isSticky:NO
+							   clickContext:[NSDate date]];
 }
 
 @end
