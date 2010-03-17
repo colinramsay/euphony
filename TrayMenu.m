@@ -54,8 +54,12 @@ TrayMenu *_self;
 			}
 			break;
 		}
+		if (_player) {
+			[_player setFiles:musicItems];
+		} else {
+			_player = [[NSSoundPlayer alloc] initWithFiles:musicItems];
+		}
 		
-		_player = [[NSSoundPlayer alloc] initWithFiles:musicItems];
 		[_player play];		
 	}
 }

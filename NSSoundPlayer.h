@@ -21,5 +21,6 @@
 -(void)displayInfo;
 -(BOOL)toggleShuffle;
 -(void)displayMessage:(NSString *)notification :(NSString *)title :(NSString *)description;
+-(void)setFiles:(NSArray *)files;
 
 @end

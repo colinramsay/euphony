@@ -15,6 +15,7 @@ NSMutableArray *_files;
 static NSSound *_sound;
 BOOL *_paused = TRUE;
 BOOL *_shuffle = FALSE;
+BOOL *_forcedStop = FALSE;
 int *_trackNumber;
 NSData *_growlIcon;
 NSString *_next;
@@ -44,8 +45,14 @@ NSString *_next;
 	return self;
 }
 
+- (void)setFiles:(NSArray *)files {
+	[self stop];
+	_files = [[NSMutableArray alloc] initWithArray:files];
+}
+
 - (void)play {
-	
+	_forcedStop = FALSE;
+
 	if([_files count] > 0) {
 
 		[self playOrPause];
@@ -80,15 +87,21 @@ NSString *_next;
 }
 
 - (void)stop {
-	[_sound stop];	
+	NSLog(@"NSSoundPlayer#stop");
+	_forcedStop = TRUE;
+	[_sound stop];
 }
 
 - (void)skip {
+	NSLog(@"NSSoundPlayer#skip");
 	[_sound stop];
 }
 
 - (void)sound:(NSSound *)sound didFinishPlaying:(BOOL)finishedPlaying {
-	[self play];
+	if (!_forcedStop) {
+		NSLog(@"NSSoundPlayer#finishedPlaying");
+		[self play];
+	}
 }
 
 - (void)playOrPause {
