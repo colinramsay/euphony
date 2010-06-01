@@ -1,3 +1,9 @@
 == OSX Player
 
 Provides a menu item with options for controlling music playback. Select a directory, and it will immediately begin playing the contents of the directory. Fast, simple.
+
+-- Keyboard shortcuts
+
+SHIFT+CTRL+ALT+CMD+Down Arrow = Play/Pause
+SHIFT+CTRL+ALT+CMD+Right Arrow = Next Track
+SHIFT+CTRL+ALT+CMD+Question Mark = Show current track
